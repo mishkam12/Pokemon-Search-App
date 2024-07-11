@@ -1,6 +1,8 @@
 body {
     font-family: Tahoma;
     background-color: darkslateblue;
+    margin: 0;
+    padding: 0;
   }
   
   main {
@@ -18,7 +20,7 @@ body {
   }
   
   form {
-    width: 30rem;
+    width: 40%;
     margin: 1.5rem;
     padding: 1rem;
     background-color: lightgrey;
@@ -30,7 +32,11 @@ body {
   label {
     font-size: 1.5rem;
   }
-  
+
+  #search-input {
+    width: 70%;
+  }
+
   #search-input,#search-button {
     font-size: 1.25rem;
     padding: .25rem;
@@ -80,5 +86,57 @@ body {
     width: 10rem;
   }
   
-  
+  /*for smaller screens*/
+
+  @media screen and (max-width: 37.5rem) {
+    main {
+      padding: 1rem;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+    }
+    
+    form {
+      margin: 0.5rem;
+      padding: 0.5rem;
+    }
+    
+    label {
+      font-size: 1rem;
+    }
+    
+    #search-input, #search-button {
+      font-size: 0.75rem;
+      padding: 0.25rem;
+      margin: 0.5rem 0.25rem;
+    }
+    
+    .output {
+      min-height: 8rem;
+      margin-top: 0.5rem;
+    }
+    
+    .main-attributes {
+      padding: 0.25rem;
+      font-size: 0.75rem;
+    }
+    
+    .weight-height {
+      font-size: 0.75rem;
+    }
+    
+    #sprite {
+      width: 4rem;
+    }
+    
+    #types span {
+      font-size: 0.5rem;
+      padding: 0.25rem;
+    }
+    
+    table {
+      margin: 0.5rem;
+    }
+  }
   

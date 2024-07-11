@@ -1,3 +1,4 @@
+// DOM element references
 const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");
 const pokemonName = document.getElementById("pokemon-name");
@@ -14,19 +15,20 @@ const specialDefense = document.getElementById("special-defense");
 const speed = document.getElementById("speed");
 const output = document.getElementById("output");
 
+// to fetch and display Pokemon data
 const pokemonSearch= async()=> {
   
   try {
     const nameOrId= searchInput.value.toLowerCase();
-    const response = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${nameOrId}`);
 
+    //update UI with Pokemon details
+    const response = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${nameOrId}`);
     const data = await response.json();
     const image = data.sprites.front_default;
-    //adding css and html to pokemonImage element
     pokemonImage.src = image;
     pokemonImage.style.display = "inline";
-      //adding corresponding information to textContent      
-      pokemonName.textContent = `${data.name.toUpperCase()}`;
+   
+    pokemonName.textContent = `${data.name.toUpperCase()}`;
     pokemonId.textContent = `#${data.id}`;
     weight.textContent =`Weight: ${data.weight}`;
     height.textContent = `Height: ${data.height}`;
@@ -38,13 +40,14 @@ const pokemonSearch= async()=> {
     speed.textContent = ` ${data.stats[5].base_stat}`;
     types.innerHTML = data.types.map(obj=>`<span class="type ${obj.type.name}">${obj.type.name}</span>`).join(" ");
   }
+  //handle errors
   catch(error){
     alert("Pokémon not found");
     console.log("Pokémon not found");
   }  
 };
 
-//reset
+//reset Pokemon details and image
 const reset = () => {
   if(output) output.remove;
   pokemonName.textContent = "";
@@ -60,7 +63,7 @@ const reset = () => {
   types.textContent = "";
 };
 
-//when button is clicked the pokemonSearch function runs as well as cancelling default action
+// Event listener for search button
 searchButton.addEventListener("click", event => {
   event.preventDefault();
   pokemonSearch();
