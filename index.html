@@ -8,61 +8,62 @@
     
 </head>
 <body>
-    <main>
-      <h1>Pokémon Search App</h1>
+  <main>
+  <h1>Pokémon Search App</h1>
       <form>
         <label for="search-input">Search for Pokémon by Name or ID: </label>
         <input id="search-input" required></input>
-        <button id="search-button" type="text">Look Up</button>
-        <div class="output">
-          <div class="main-attributes">
-            <span id="pokemon-name"></span>   
-            <span id="pokemon-id"></span>
-          </div>
-          <div id="weight-height">
-            <span id="weight"></span>
-            <span id="height"></span>
-          </div>
-          <div class = "image-div">
-            <img src="" id="sprite" alt="Pokemon image"> 
-           </div>
-            <p id="types"></p>
-          </div>
-            <div class="stats">
-              <table>
-                <tr>
-                  <th>Base Name</th>
-                  <th>Base Stats</th>
-                </tr>
-                <tr>
-                  <td>HP</td>
-                  <td id="hp"></td>
-                </tr>
-                <tr>
-                  <td>Attack</td>
-                  <td id="attack"></td>
-                </tr>
-                <tr>
-                  <td>Defense</td>
-                  <td id="defense"></td>
-                </tr>
-                <tr>
-                  <td>Special Attack</td>
-                  <td id="special-attack"></td>
-                </tr>
-                <tr>
-                  <td>Special Defense</td>
-                  <td id="special-defense"></td>
-                </tr>
-                <tr>
-                  <td>Speed</td>
-                  <td id="speed"></td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </form>
-    </main>
-    <script src="app.js" ></script> 
+        <button id="search-button" type="text">Find 'Em</button>
+        <img id ="pokemon-card" src="pokemon-card-image.jpg" alt="pokemon card"></img>
+      </form>
+    </div>
+    <div class="output" id="pokemon-info">
+      <div id="pokemon-container">
+      <div class="name-and-hp">
+        <span id="pokemon-name"></span>
+        <span id="hp">HP <span id="pokemon-hp"></span></span>   
+      </div>
+      <div id="main-attributes">
+        <div id="image">
+          <img src="" id="sprite" alt="Pokemon image"> 
+        </div>
+        <hr>
+      <span id="pokemon-id"></span>
+        <span id="weight"></span>
+        <span id="height"></span>
+      </div>
+        <div id="types"></div>
+      <div class="stats">
+        <table id="stats-table">
+          <tr>
+            <th>Base Name</th>
+            <th>Base Stats</th>
+          </tr>
+          <tr>
+            <td>Attack</td>
+            <td id="attack"></td>
+          </tr>
+          <tr>
+            <td>Defense</td>
+            <td id="defense"></td>
+          </tr>
+          <tr>
+            <td>Special Attack</td>
+            <td id="special-attack"></td>
+          </tr>
+          <tr>
+            <td>Special Defense</td>
+            <td id="special-defense"></td>
+          </tr>
+          <tr>
+            <td>Speed</td>
+            <td id="speed"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="app.js" ></script> 
 </body>
 </html>
