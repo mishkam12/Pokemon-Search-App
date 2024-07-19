@@ -48,7 +48,7 @@ body {
   }
 
   #search-input {
-    width: 12rem;
+    width: 40%;
     font-size: 1rem;
     padding: .25rem;
     margin: .75rem .25rem;
@@ -168,8 +168,15 @@ body {
     h1 {
       font-size: 1.5rem;
     }
+
+    #pokemon-card {
+      width: 80%;
+      border-radius: .75rem;
+      box-shadow: .5rem .5rem rgb(45, 60, 120);
+    }
     
     form {
+      width: 80%;
       margin: 0.5rem;
       padding: 0.5rem;
     }
@@ -185,6 +192,7 @@ body {
     }
     
     .output {
+      width: 80%;
       min-height: 8rem;
       margin-top: 0.5rem;
     }
